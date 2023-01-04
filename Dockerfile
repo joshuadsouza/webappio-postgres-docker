@@ -5,3 +5,4 @@ ENV POSTGRES_DB dev
 ENV PGUSER root
 COPY init.sql /docker-entrypoint-initdb.d/
 EXPOSE 5432
+ENTRYPOINT ["tail", "-f", "/dev/null"]
