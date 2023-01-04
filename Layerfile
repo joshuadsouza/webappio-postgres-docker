@@ -13,5 +13,8 @@ RUN apt-get update && \
 
 COPY . .
 
+RUN sudo apt-get install postgresql-client-common
+RUN sudo apt-get install postgresql-client
+
 RUN docker build -t image .
-RUN docker run -d -t image
+RUN docker run -d -t -p 5432:5432 image
