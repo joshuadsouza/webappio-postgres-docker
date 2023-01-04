@@ -4,4 +4,3 @@ ENV POSTGRES_DB root
 ENV POSTGRES_PASSWORD postgres
 COPY init.sql /docker-entrypoint-initdb.d/
 EXPOSE 5432
-ENTRYPOINT ["tail", "-f", "/dev/null"]
